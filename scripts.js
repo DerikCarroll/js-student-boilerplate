@@ -11,4 +11,4 @@ while (counter <= 10) {
   counter += 1; // counter = counter + 1;
 }
 
-console.log(sum); // Displays the sum in the console
+console.log(sum); // Displays the sum variable in the console
