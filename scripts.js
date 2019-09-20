@@ -1,7 +1,8 @@
 // Write a program that sums the numbers from any given starting point and any given ending point.
 
-// A function can accepts named parameters.
-function numberSummer(start, end) {
+// A function can accept named parameters.
+// Default variables assigned if no arguments passed in.
+function numberSummer(start = 1, end = 10) {
   let sum = 0; // Sum of the numbers.
 
   // `<=` is a comparison operator that means less than or equal to
@@ -11,8 +12,10 @@ function numberSummer(start, end) {
     sum += i; // sum = sum + i;
   }
 
-  console.log(sum); // Displays the sum variable in the console
+  return sum; // Return sum variable for use in code.
 }
 
 // Invoke the function and pass in arguments.
-numberSummer(1, 10);
+// Assigns the total variable the value of the sum variable.
+const total = numberSummer(1, 10);
+console.log(total);
