@@ -2,12 +2,12 @@
 
 // A function can accept named parameters.
 // Default variables assigned if no arguments passed in.
-function numberSummer(start = 1, end = 10, inc = 1) {
+function numberSummer(start = 1, end = 10, interval = 1) {
   let sum = 0; // Sum of the numbers.
 
   // `<=` is a comparison operator that means less than or equal to
   // For loop declares, compares, and increments its own variable for the loop
-  for (let i = start; i <= end; i += inc) {
+  for (let i = start; i <= end; i += interval) {
     // `+=` is an assignment operator that adds and then assigns the new value
     sum += i; // sum = sum + i;
   }
