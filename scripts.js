@@ -1,23 +1,26 @@
 // Write a program that sums the numbers from any given starting point and any given ending point.
 
+// Const array declaration.
+const nums = [];
+
 // A function can accept named parameters.
 // Default variables assigned if no arguments passed in.
 function numberSummer(start = 1, end = 10, interval = 1) {
-  let sum = 0; // Sum of the numbers.
-
   // `<=` is a comparison operator that means less than or equal to
   // For loop declares, compares, and increments its own variable for the loop
   for (let i = start; i <= end; i += interval) {
-    // `+=` is an assignment operator that adds and then assigns the new value
-    sum += i; // sum = sum + i;
+    // Uses .push to put numbers at set intervals into the array.
+    nums.push(i);
   }
 
-  return sum; // Return sum variable for use in code.
+  // Returns the array after doing the .reduce function.
+  // Taking all of them numbers in the array and condensing them into one with addition.
+  return nums.reduce((total, num) => (total += num)); // Return total of variables for use in code.
 }
 
 // Invoke the function and pass in arguments.
-// Assigns the total variable the value of the sum variable.
-const total = numberSummer(5, 500, 5);
+// Assigns the total variable the value of the reduced array.
+const total = numberSummer(1, 10, 1);
 
 // Assign the output from the for loop to a new variable.
 const output = document.querySelector("output");
